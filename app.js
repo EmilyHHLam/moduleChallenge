@@ -1,17 +1,19 @@
 var http = require('http');
 // var cat = require('./modules/M1.js');
 
-//Scott Code
-var rand = require("./modules/acctBalance.js");
-//console.log(rand(1,9));
+
+var acctBal= require("./modules/acctBalance.js");
 
 //specity for
-http.createServer(function(request, response){
+var server = http.createServer(function(request, response){
+    // 1. cacluate the balance as a string
+    var accountBalance = acctBal();
+   // 2. print out this string
+   response.writeHead(200);
+   response.write(accountBalance);
+   response.end();
+});
 
-
-  response.writeHead(200);
-  response.write(toString(rand));
-  response.end();
-}).listen(3000);
+server.listen(3000);
 
 console.log("Listening");
