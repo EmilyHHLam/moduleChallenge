@@ -1,7 +1,5 @@
 
-//var http = require('http');
-var convertUSD = require('./USConversion.js');
-//link to app.js
+
 
 var ranNumb;
 ///random min = 100 , max 1000000
@@ -17,9 +15,4 @@ function ranFunc(minNumb,maxNumb) {
 }
 
 
-
-//console.log(add(100,1000000));
-//module.exports = add;
-
-//Scott Code
 module.exports = ranFunc;
