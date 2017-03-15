@@ -5,16 +5,12 @@ var ranFunc = require('./randNumber.js');
 var convertFunc = require('./USConversion.js');
 
 function acctBal() {
+//get the random number between 100 and 1000000
+  var randNumb = ranFunc(100,1000000);
+  //format the number into the currency format
+  var currNumb = convertFunc(randNumb);
 
-var randNumb = randFunc(100,1000000);
-var currNumb = convertFunc(randNumb);
-
-  return ("Account Blance: \n" +currNumb);
+  return ("Account Balance: \n" +currNumb);
 }
 
-
-
-
-
-module.exports = ranFunc;
-module.exports = convertFunc;
+module.exports = acctBal;
